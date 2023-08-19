@@ -1,8 +1,8 @@
 ---
 - name: Install OpenJDK 11 on Ubuntu
-  hosts: all
+  hosts: slave
   become: true
-
+  become_method: sudo
   tasks:
     - name: Update apt cache
       apt:
